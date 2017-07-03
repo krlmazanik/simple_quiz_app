@@ -79,7 +79,7 @@ var main = function() {
       for (var opt in options) {
 
         var radioEle = document.createElement('input');
-        radioEle.type = "radio";
+        radioEle.type = 'radio';
         radioEle.value = options[opt];
         radioEle.name = name;
         questionDiv.appendChild(radioEle);
@@ -91,20 +91,20 @@ var main = function() {
 
     //makes first element visible
     $(".quest").first().fadeIn(600);
-    $(".quest").first().addClass("active");
+    $(".quest").first().addClass('active');
 
     //Scripting NEXT QUESTION Button
     $("#gonext").click(function() {
-      var currentQuestion = $(".active");
+      var currentQuestion = $('.active');
       var nextQuestion = currentQuestion.next();
 
       //changes questions
-      currentQuestion.hide().removeClass("active");
-      nextQuestion.fadeIn(600).addClass("active");
+      currentQuestion.hide().removeClass('active');
+      nextQuestion.fadeIn(600).addClass('active');
 
       //Here we are using for loop in order to cycle through every radio button on the page to get the value
       for (var i = 0; i < listQuestions.length; i++) {
-        var radios = document.getElementsByName("radio" + i);
+        var radios = document.getElementsByName('radio' + i);
         var correctAnswerIndex = listQuestions[i].correctAnswer;
         var getCorrectAnswer = listQuestions[i].choices[correctAnswerIndex];
         for (var j = 0; j < radios.length; j++) {
@@ -121,15 +121,15 @@ var main = function() {
       //Result page spawn
       if (nextQuestion.length === 0) {
         //Creating of result div and h2 of it
-        var resultDiv = document.createElement("DIV");
-        resultDiv.setAttribute("class", "result");
-        var resultHeading = document.createElement("H2");
-        var textHeading = document.createTextNode("Congratulations!");
+        var resultDiv = document.createElement('DIV');
+        resultDiv.setAttribute('class', 'result');
+        var resultHeading = document.createElement('H2');
+        var textHeading = document.createTextNode('Congratulations!');
         resultHeading.appendChild(textHeading);
         resultDiv.appendChild(resultHeading);
         //Posting the results
-        var userResult = document.createElement("P");
-        var textuserResult = document.createTextNode("You have answered " + amountCorrect + " questions from " + listQuestions.length);
+        var userResult = document.createElement('P');
+        var textuserResult = document.createTextNode('You have answered ' + amountCorrect + ' questions from ' + listQuestions.length);
         userResult.appendChild(textuserResult);
         resultDiv.appendChild(userResult);
         document.getElementById('main-window').appendChild(resultDiv);
@@ -142,12 +142,12 @@ var main = function() {
     });
 
     //Scripting PREVIOUS QUESTION Button
-    $("#goback").click(function() {
-      var currentQuestion = $(".active");
+    $('#goback').click(function() {
+      var currentQuestion = $('.active');
       var prevQuestion = currentQuestion.prev();
 
-      currentQuestion.hide().removeClass("active");
-      prevQuestion.fadeIn(600).addClass("active");
+      currentQuestion.hide().removeClass('active');
+      prevQuestion.fadeIn(600).addClass('active');
 
       //not working
       if (prevQuestion.length === 0) {
