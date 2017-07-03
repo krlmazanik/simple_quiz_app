@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CapQuiz</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/design.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Capital Quiz v1.0</a>
+      </div>
+      <div class="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="javascript:history.go(0)">Home</a></li>
+          <!-- Refresh page -->
+          <li><a href="#" data-toggle="modal" data-target="#about">About</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
+          <li><a href="#">Source Code</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main app block -->
+  <div class="main" id="main">
+    <div class="container">
+      <div class="jumbotron" id="main-window">
+        <!-- Welcome block -->
+        <div class="welcome center-block" id="welcome">
+          <h1>Welcome to Capital Quiz v1.0</h1>
+          <p>During this quiz your can check your knowledge of geography</p>
+          <button type="button" class="btn btn-lg btn-primary" id="start">Let's start</button>
+        </div>
+        <!-- div in which will be populated with questions -->
+        <div id="question-box"></div>
+        <!-- Navigation bar for quiz: next question and previous one -->
+        <div class="slider-nav hidden" id="slider">
+          <a href="#" class="btn btn-info btn-lg" id="goback">
+              <span class="glyphicon glyphicon-menu-left"></span> Previous one
+            </a>
+
+          <a href="#" class="btn btn-info btn-lg" id="gonext">
+              Next question <span class="glyphicon glyphicon-menu-right"></span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal block: About -->
+  <div class="modal fade" id="about" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">About</h2>
+        </div>
+        <div class="modal-body">
+          <p>
+            Basically, I have made this quiz as a last stage of learning beginning JavaScript following learning path from
+            <a href="http://javascriptissexy.com/how-to-learn-javascript-properly/" target="_blank">JavaScript is Sexy</a>.
+          </p>
+          <p>
+            The main idea was to build simple quiz application that will function as follows:
+          </p>
+          <ul>
+            <li>It is a simple quiz that has radio button choices, and it will show the quiz taker his or her score upon completion.</li>
+            <li>The quiz can show any number of questions and any number of choices.</li>
+            <li>Tally the user’s score and display the final score on the last page. The last page will only show the score, so remove the last question.</li>
+            <li>Use an array to store all the questions. Each question, along with its choices and correct answer, should be stored in an object. The array of questions should look similar to this (Notice that only one question is in this example array; you
+              will add many questions)</li>
+            <li>Dynamically (with document.getElementById or jQuery) remove the current question and add the next question, when the user clicks the “Next” button. The Next button will be the only button to navigate this version of the quiz.</li>
+            <li>Add a “Back” button to allow the user to go back and change her answer. The user can go back up to the first question. For the questions that the user has answered already, be sure to show the radio button selected, so that the user is not
+              forced to answer the questions again, which she has completed.</li>
+            <li>Use jQuery to add animation (fade out the current question and fade in the next question).</li>
+          </ul>
+          <p>
+            You can take quiz source code, in order to use it as you wish.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Block: Contacts -->
+  <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Contacts</h2>
+        </div>
+        <div class="modal-body">
+          <p>You can contact me via email: <b>krlmazanik@gmail.com</b></p>
+          <p>Also you can use social networks:</p>
+          <a href="https://www.facebook.com/profile.php?id=100012819635107" target="_blank">
+          <i class="fa fa-facebook-square" style="font-size:48px;"></i>
+        </a>
+          <br>
+          <a href="https://vk.com/kirilmazanik" target="_blank">
+          <i class="fa fa-vk" style="font-size:48px;"></i>
+        </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

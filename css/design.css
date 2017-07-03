@@ -1,0 +1,21 @@
+#main{
+  text-align: center;
+}
+.hidden{
+  display: none;
+}
+.quest{
+  display: none;
+}
+.active {
+  display: inherit;
+}
+.jumbotron p{
+  margin-bottom: 15%;
+}
+.quest label {
+  margin: 10px;
+}
+#slider{
+  margin-top: 2.5%;
+}
