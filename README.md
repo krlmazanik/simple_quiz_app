@@ -9,4 +9,5 @@ The main idea was to build simple quiz application that will function as follows
 - Dynamically (with document.getElementById or jQuery) remove the current question and add the next question, when the user clicks the “Next” button. The Next button will be the only button to navigate this version of the quiz.
 - Add a “Back” button to allow the user to go back and change her answer. The user can go back up to the first question. For the questions that the user has answered already, be sure to show the radio button selected, so that the user is not forced to answer the questions again, which she has completed.
 - Use jQuery to add animation (fade out the current question and fade in the next question).
+
 You can take quiz source code, in order to use it as you wish.
